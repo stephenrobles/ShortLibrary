@@ -84,6 +84,8 @@ struct InspectorPane: View {
             }
         }
         .frame(minWidth: 320, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+        // The inspector gets its own toolbar section; without this it shows the pane's material through the toolbar.
+        .toolbarBackground(.visible, for: .windowToolbar)
     }
 }
 #endif
