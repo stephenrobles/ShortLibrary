@@ -115,7 +115,7 @@ enum ShortcutURLs {
             if let w = q["w"].flatMap(Double.init), let h = q["h"].flatMap(Double.init), let window = NSApp.windows.first(where: { $0.isVisible }) {
                 let screen = window.screen ?? NSScreen.main
                 let x = q["x"].flatMap(Double.init) ?? 0
-                let top = (screen?.visibleFrame.maxY ?? h) - (q["y"].flatMap(Double.init) ?? 0)
+                let top = Double(screen?.visibleFrame.maxY ?? CGFloat(h)) - (q["y"].flatMap(Double.init) ?? 0)
                 window.setFrame(NSRect(x: x, y: top - h, width: w, height: h), display: true)
             }
             #endif
