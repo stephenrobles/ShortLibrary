@@ -119,6 +119,20 @@ enum ShortcutURLs {
                 window.setFrame(NSRect(x: x, y: top - h, width: w, height: h), display: true)
             }
             #endif
+        case "seed":
+            // Creates one folder, tag and smart list so CloudKit's development schema learns every record type.
+            let context = Persistence.context
+            let folder = LibraryFolder(name: "Schema Seed Folder")
+            let tag = Tag(name: "Schema Seed Tag")
+            let list = SmartList(name: "Schema Seed List")
+            context.insert(folder); context.insert(tag); context.insert(list)
+            try? context.save()
+        case "unseed":
+            let context = Persistence.context
+            for f in (try? context.fetch(FetchDescriptor<LibraryFolder>())) ?? [] where f.name == "Schema Seed Folder" { context.delete(f) }
+            for t in (try? context.fetch(FetchDescriptor<Tag>())) ?? [] where t.name == "Schema Seed Tag" { context.delete(t) }
+            for l in (try? context.fetch(FetchDescriptor<SmartList>())) ?? [] where l.name == "Schema Seed List" { context.delete(l) }
+            try? context.save()
         case "inspector":
             LibraryNavigation.shared.showInspector = components?.queryItems?.first { $0.name == "show" }?.value != "0"
             if LibraryNavigation.shared.selectedShortcut == nil {
