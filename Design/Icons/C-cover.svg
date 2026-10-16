@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <rect id="layer" x="-30" y="-30" width="60" height="60" rx="13" ry="13"/>
+    <mask id="cut" maskUnits="userSpaceOnUse" x="-80" y="-80" width="160" height="160">
+      <rect x="-80" y="-80" width="160" height="160" fill="white"/>
+      <g transform="translate(0,-13) scale(1.22,0.74) rotate(45)"><use href="#layer" fill="black"/></g>
+    </mask>
+    <g id="glyph">
+      <g mask="url(#cut)"><g transform="translate(0,15) scale(1,0.6) rotate(45)"><use href="#layer" fill="#FFFFFF"/></g></g>
+      <g transform="translate(0,-13) scale(1,0.6) rotate(45)"><use href="#layer" fill="#FFFFFF"/></g>
+    </g>
+    <linearGradient id="red" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF8A8E"/><stop offset="1" stop-color="#E8555C"/></linearGradient>
+    <linearGradient id="yellow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFC775"/><stop offset="1" stop-color="#EBA044"/></linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#72DB85"/><stop offset="1" stop-color="#3FB85A"/></linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5CC8FF"/><stop offset="1" stop-color="#1D9FE8"/></linearGradient>
+    <linearGradient id="purple" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B087E0"/><stop offset="1" stop-color="#7F55B8"/></linearGradient>
+    <clipPath id="mask"><rect width="1024" height="1024" rx="230" ry="230"/></clipPath>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F7F8FC"/><stop offset="1" stop-color="#E3E6F2"/></linearGradient>
+    <linearGradient id="cover" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2F8BFF"/><stop offset="0.5" stop-color="#5B5FE8"/><stop offset="1" stop-color="#C04BC9"/></linearGradient>
+    <linearGradient id="spine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1E4FB8"/><stop offset="1" stop-color="#2F6FE0"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="26" stdDeviation="24" flood-color="#2B2F6B" flood-opacity="0.35"/></filter>
+  </defs>
+  <g clip-path="url(#mask)">
+    <rect width="1024" height="1024" fill="url(#bg)"/>
+    <g filter="url(#shadow)">
+      <rect x="296" y="214" width="470" height="620" rx="26" fill="#FFFFFF"/>
+      <g stroke="#D6DAE8" stroke-width="6"><line x1="742" y1="236" x2="742" y2="812"/><line x1="754" y1="236" x2="754" y2="812"/></g>
+      <rect x="236" y="200" width="90" height="640" rx="28" fill="url(#spine)"/>
+      <rect x="270" y="190" width="476" height="624" rx="30" fill="url(#cover)"/>
+      <rect x="270" y="190" width="476" height="624" rx="30" fill="#FFFFFF" opacity="0.08"/>
+    </g>
+    <g transform="translate(508 460) scale(3.1)"><use href="#glyph"/></g>
+    <path d="M640,190 L640,330 L672,300 L704,330 L704,190 Z" fill="#FF6B6E"/>
+    <g fill="#FFFFFF" opacity="0.55"><rect x="360" y="700" width="200" height="16" rx="8"/><rect x="360" y="736" width="140" height="16" rx="8"/></g>
+  </g>
+</svg>

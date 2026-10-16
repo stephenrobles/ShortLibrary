@@ -1,0 +1,12 @@
+build/
+dist/
+xcuserdata/
+.DS_Store
+Design/Icons/*.swift
+Design/Icons/render
+Design/Icons/render2
+Design/Icons/makeicons
+Design/Icons/sheet*.png
+Design/Icons/contact-sheet*.png
+Design/Icons/glyph*.png
+Design/Icons/glyph.txt

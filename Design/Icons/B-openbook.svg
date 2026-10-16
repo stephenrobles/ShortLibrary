@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <rect id="layer" x="-30" y="-30" width="60" height="60" rx="13" ry="13"/>
+    <mask id="cut" maskUnits="userSpaceOnUse" x="-80" y="-80" width="160" height="160">
+      <rect x="-80" y="-80" width="160" height="160" fill="white"/>
+      <g transform="translate(0,-13) scale(1.22,0.74) rotate(45)"><use href="#layer" fill="black"/></g>
+    </mask>
+    <g id="glyph">
+      <g mask="url(#cut)"><g transform="translate(0,15) scale(1,0.6) rotate(45)"><use href="#layer" fill="#FFFFFF"/></g></g>
+      <g transform="translate(0,-13) scale(1,0.6) rotate(45)"><use href="#layer" fill="#FFFFFF"/></g>
+    </g>
+    <linearGradient id="red" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF8A8E"/><stop offset="1" stop-color="#E8555C"/></linearGradient>
+    <linearGradient id="yellow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFC775"/><stop offset="1" stop-color="#EBA044"/></linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#72DB85"/><stop offset="1" stop-color="#3FB85A"/></linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5CC8FF"/><stop offset="1" stop-color="#1D9FE8"/></linearGradient>
+    <linearGradient id="purple" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B087E0"/><stop offset="1" stop-color="#7F55B8"/></linearGradient>
+    <clipPath id="mask"><rect width="1024" height="1024" rx="230" ry="230"/></clipPath>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5A7BFF"/><stop offset="0.55" stop-color="#4E5BE0"/><stop offset="1" stop-color="#7A47C9"/></linearGradient>
+    <linearGradient id="page" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E9ECF7"/></linearGradient>
+    <linearGradient id="gutter" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#000" stop-opacity="0"/><stop offset="0.5" stop-color="#000" stop-opacity="0.18"/><stop offset="1" stop-color="#000" stop-opacity="0"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#1B1F4A" flood-opacity="0.45"/></filter>
+    <filter id="tileshadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000" flood-opacity="0.18"/></filter>
+  </defs>
+  <g clip-path="url(#mask)">
+    <rect width="1024" height="1024" fill="url(#bg)"/>
+    <path d="M512,268 C400,236 250,232 128,262 L128,770 C250,740 400,744 512,776 C624,744 774,740 896,770 L896,262 C774,232 624,236 512,268 Z" fill="#2E3470" filter="url(#shadow)"/>
+    <path d="M512,290 C410,262 280,258 156,284 L156,744 C280,718 410,722 512,750 Z" fill="url(#page)"/>
+    <path d="M512,290 C614,262 744,258 868,284 L868,744 C744,718 614,722 512,750 Z" fill="url(#page)"/>
+    <rect x="472" y="280" width="80" height="470" fill="url(#gutter)"/>
+    <rect x="210" y="330" width="250" height="168" rx="40" fill="url(#red)" filter="url(#tileshadow)"/>
+    <g transform="translate(262 380) scale(0.62)"><use href="#glyph"/></g>
+    <g fill="#FFFFFF" opacity="0.9"><rect x="238" y="438" width="120" height="14" rx="7"/><rect x="238" y="462" width="80" height="14" rx="7"/></g>
+    <rect x="210" y="536" width="250" height="168" rx="40" fill="url(#yellow)" filter="url(#tileshadow)"/>
+    <g transform="translate(262 586) scale(0.62)"><use href="#glyph"/></g>
+    <g fill="#FFFFFF" opacity="0.9"><rect x="238" y="644" width="120" height="14" rx="7"/><rect x="238" y="668" width="80" height="14" rx="7"/></g>
+    <rect x="564" y="330" width="250" height="168" rx="40" fill="url(#blue)" filter="url(#tileshadow)"/>
+    <g transform="translate(616 380) scale(0.62)"><use href="#glyph"/></g>
+    <g fill="#FFFFFF" opacity="0.9"><rect x="592" y="438" width="120" height="14" rx="7"/><rect x="592" y="462" width="80" height="14" rx="7"/></g>
+    <rect x="564" y="536" width="250" height="168" rx="40" fill="url(#green)" filter="url(#tileshadow)"/>
+    <g transform="translate(616 586) scale(0.62)"><use href="#glyph"/></g>
+    <g fill="#FFFFFF" opacity="0.9"><rect x="592" y="644" width="120" height="14" rx="7"/><rect x="592" y="668" width="80" height="14" rx="7"/></g>
+    <path d="M700,268 L700,330 L724,312 L748,330 L748,262 Z" fill="#FF6B6E"/>
+  </g>
+</svg>
