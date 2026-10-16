@@ -19,6 +19,14 @@
 	<array>
 		<string>shortcuts</string>
 	</array>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
+	<key>SUEnableInstallerLauncherService</key>
+	<true/>
+	<key>SUFeedURL</key>
+	<string>https://beardfm.app/shortlibrary/appcast.xml</string>
+	<key>SUPublicEDKey</key>
+	<string>qPCRuSFnnG+/+rFz4Bevqlx8dv3AIGPdV1R0w+lnLrc=</string>
 	<key>NSAppleEventsUsageDescription</key>
 	<string>ShortLibrary reads your Shortcuts library and runs shortcuts through the Shortcuts app.</string>
 </dict>

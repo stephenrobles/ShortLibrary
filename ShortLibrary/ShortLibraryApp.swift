@@ -11,6 +11,9 @@ struct ShortLibraryApp: App {
     var body: some Scene {
         WindowGroup {
             RootView()
+                #if os(macOS)
+                .onAppear { _ = AppUpdater.shared }
+                #endif
         }
         .modelContainer(Persistence.container)
         .commands { LibraryCommands() }
@@ -25,6 +28,12 @@ struct ShortLibraryApp: App {
 
 struct LibraryCommands: Commands {
     var body: some Commands {
+        #if os(macOS)
+        CommandGroup(after: .appInfo) {
+            Button("Check for Updates…") { AppUpdater.shared.checkForUpdates() }
+                .disabled(!AppUpdater.shared.canCheckForUpdates)
+        }
+        #endif
         CommandGroup(after: .newItem) {
             Button("Sync with Shortcuts") {
                 Task { await LibrarySyncController.shared.syncNow() }

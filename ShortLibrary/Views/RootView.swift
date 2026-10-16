@@ -142,6 +142,9 @@ struct SettingsView: View {
             Toggle("Sync with Shortcuts when ShortLibrary opens", isOn: $syncOnLaunch)
             Toggle("Double-click a shortcut to run it", isOn: $doubleClickRuns)
             Toggle("Folders include shortcuts from their subfolders", isOn: $includeSubfolders)
+            Toggle("Check for updates automatically", isOn: Binding(
+                get: { AppUpdater.shared.automaticallyChecksForUpdates },
+                set: { AppUpdater.shared.automaticallyChecksForUpdates = $0 }))
         }
         .formStyle(.grouped)
         .frame(width: 440)

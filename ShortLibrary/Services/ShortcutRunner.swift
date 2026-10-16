@@ -109,6 +109,16 @@ enum ShortcutURLs {
         #if DEBUG
         case "diagnostics":
             Diagnostics.copy(forName: name == "Shortcut" ? nil : name)
+        case "window":
+            #if os(macOS)
+            let q = Dictionary(uniqueKeysWithValues: (components?.queryItems ?? []).compactMap { i in i.value.map { (i.name, $0) } })
+            if let w = q["w"].flatMap(Double.init), let h = q["h"].flatMap(Double.init), let window = NSApp.windows.first(where: { $0.isVisible }) {
+                let screen = window.screen ?? NSScreen.main
+                let x = q["x"].flatMap(Double.init) ?? 0
+                let top = (screen?.visibleFrame.maxY ?? h) - (q["y"].flatMap(Double.init) ?? 0)
+                window.setFrame(NSRect(x: x, y: top - h, width: w, height: h), display: true)
+            }
+            #endif
         case "inspector":
             LibraryNavigation.shared.showInspector = components?.queryItems?.first { $0.name == "show" }?.value != "0"
             if LibraryNavigation.shared.selectedShortcut == nil {
